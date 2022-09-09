@@ -7,63 +7,100 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles/styles.css">
-  <script src="scripts/script.js"></script>
+  <script src="scripts/index.js" defer></script>
 
   <title>Brilo - task</title>
 
 </head>
+
 <body>
 
-  <nav class="nav">
+  <header class="header">
     <div class="container">
-      <ul class="nav-links-wrap">
-        <li class="nav-link link-home">Home</li>
-        <li class="nav-link">About me</li>
-        <li class="nav-link">My work</li>
-      </ul>
-    </div>
-  </nav>
-
-  <section class="main">
-    <div class="container">
-
-      <div class="hero">
-        <div class="hero-content">
-          <h1 class="hero-header">Damian Siskovic</h1>
-          <p class="hero-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis commodi debitis voluptas maiores doloribus? Nam ex inventore soluta voluptatem, optio hic iusto. Id maiores voluptas mollitia hic temporibus nihil quo. Quasi consectetur quaerat ab id est impedit, nam dicta qui?</p>
-          <button class="hero-cta">Learn more</button>
-        </div>
-        <div class="hero-image"></div>
+      <div class="nav-wrap">
+        <button class="nav--mobile" aria-controls="page-nav" aria-expanded="false">
+          <img class="nav--mobile--open" src="./img/icn-mobile-menu.png" alt="" aria-hidden="true" data-visible>
+          <img class="nav--mobile--close" src="./img/icn-mobile-menu-close.png" alt="" aria-hidden="true">
+          <span class="sr-only">Menu</span>
+        </button>
+        <nav class="nav--desktop" id="page-nav">
+          <ul role="list" class="nav--desktop__links-wrap" aria-label="page-navigation">
+            <li class="nav--desktop__link">
+              <a class="txt--uppercase txt--undecor" href="#">Home</a>
+            </li>
+            <li class="nav--desktop__link">
+              <a class="txt--uppercase txt--undecor" href="#">About me</a>
+            </li>
+            <li class="nav--desktop__link">
+              <a class="txt--uppercase txt--undecor" href="#">My work</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-
-      <div class="band">
-        <h2 class="band-header">What I did</h2>
-
-        <div class="card-wrap">
-          <div class="card">
-            <h3 class="card-header">Epic project</h3>
-            <p class="card-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, perspiciatis!</p>
-          </div>
-          <div class="card">
-            <h3 class="card-header">Another project</h3>
-            <p class="card-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero corrupti eligendi recusandae alias dolore dignissimos explicabo reiciendis blanditiis aperiam autem?</p>
-          </div>
-          <div class="card">
-            <h3 class="card-header">Company rebrand</h3>
-            <p class="card desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, voluptatibus! Quaerat adipisci ea quod quibusdam.</p>
-          </div>
-        </div>
-
-      </div>
-
     </div>
-  </section>
+  </header>
+
+  <main class="main">
+    <section>
+      <div class="container">
+        <div class="hero">
+          <div class="hero__content">
+            <h1 class="hero__header | txt--uppercase">Jack Jackson</h1>
+            <p class="hero__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis commodi debitis voluptas maiores doloribus? Nam ex inventore soluta voluptatem, optio hic iusto. Id maiores voluptas mollitia hic temporibus nihil quo. Quasi consectetur quaerat ab id est impedit, nam dicta qui?</p>
+            <button class="hero__cta | txt--uppercase">Learn more</button>
+          </div>
+          <div class="hero__image"></div>
+        </div>
+  
+        <div class="band">
+          <h2 class="band__header | txt--uppercase">What I did</h2>
+  
+          <div class="card-wrap">
+            <div class="card">
+              <div>
+                <img src="./img/card-project.png" alt="">
+              </div>
+              <div class="card__img | card__img--epic"></div>
+              <div class="card__content">
+                <h3 class="card__header | txt--uppercase">Epic project</h3>
+                <p class="card__desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, perspiciatis!</p>
+              </div>
+            </div>
+            <div class="card">
+              <div>
+                <img src="./img/card-work.png" alt="">
+              </div>
+              <div class="card__content">
+                <h3 class="card__header | txt--uppercase">Another project</h3>
+                <p class="card__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero corrupti eligendi recusandae alias dolore dignissimos explicabo reiciendis blanditiis aperiam autem?</p>
+              </div>
+            </div>
+            <div class="card">
+              <div>
+                <img src="./img/card-rebrand.png" alt="">
+              </div>
+              <div class="card__content">
+                <h3 class="card__header | txt--uppercase">Company rebrand</h3>
+                <p class="card__desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, voluptatibus! Quaerat adipisci ea quod quibusdam.</p>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+        
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container">
-      <div class="footer-wrap">
-        <p class="footer-author">Damian Siskovic 2022</p>
+      <div class="creator">
+        <p class="creator__author">Jack Jackson 2022</p>
       </div>
     </div>
   </footer>
